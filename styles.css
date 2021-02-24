@@ -642,12 +642,24 @@ header h2 i:hover {
 
 @media screen and (max-width: 768px) {
   .component {
-    width: 350px;
+    width: 340px;
+  }
+
+  .select-box,
+  .options-container,
+  .input {
+    width: 340px;
   }
 
   .button-container {
     position: relative;
     top: 35px;
     margin-bottom: 50px;
+  }
+
+  .select-box1,
+  .options-container1,
+  .output {
+    width: 340px;
   }
 }
