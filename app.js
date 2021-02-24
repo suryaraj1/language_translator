@@ -126,3 +126,14 @@ tippy('.icon.copy', {
     }, 1000);
   }
 })
+
+tippy('.icon.download', {
+  content: 'downloading..',
+  trigger: 'click',
+  hideOnClick: false,
+  onShow(instance) {
+    setTimeout(() => {
+      instance.hide();
+    }, 1000);
+  }
+})
