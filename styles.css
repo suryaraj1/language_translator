@@ -642,7 +642,7 @@ header h2 i:hover {
 
 @media screen and (max-width: 768px) {
   .component {
-    width: 400px;
+    width: 350px;
   }
 
   .button-container {
