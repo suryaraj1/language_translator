@@ -82,7 +82,7 @@
           Select Language
         </div>
       </div>
-      <textarea name="" id="" cols="40" rows="10" class="input"></textarea>
+      <textarea name="" id="" cols="40" rows="10" class="input" placeholder="Type to translate"></textarea>
     </div>
 
     <div class="button-container">
@@ -154,7 +154,19 @@
           Select Language
         </div>
       </div>
-      <textarea disabled name="" id="" cols="40" rows="10" class="output"></textarea>
+      <div class="output">
+        <div class="output-value"></div>
+        <div class="card-footer">
+          <div class="icon-collection">
+            <div class="icon copy" data-clipboard-target=".output-value">
+              <i class="fas fa-copy"></i>
+            </div>
+            <div class="icon download">
+              <i class="fas fa-download"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

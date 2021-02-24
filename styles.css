@@ -268,6 +268,8 @@ header h2 i:hover {
   resize: none;
   border: none;
   outline: none;
+  height: 326px;
+  width: 424.8px;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   padding: 7px 12px;
@@ -276,6 +278,11 @@ header h2 i:hover {
   font-size: 1.3em;
   position: relative;
   top: 60px;
+  cursor: pointer;
+}
+
+.output-value::selection {
+  background-color: #fff;
 }
 
 /* second select menu starts here */
@@ -429,6 +436,11 @@ header h2 i:hover {
   background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
 }
 
+.icon i {
+  cursor: pointer;
+  color: #fafafa;
+}
+
 
 .btn-reset {
   border: none;
@@ -497,6 +509,64 @@ header h2 i:hover {
   margin: 3px;
 }
 
+.tippy-box[data-theme~='bw-gradient'] {
+  background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
+}
+
+.tippy-box[data-theme~='bw-gradient'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: rgb(49, 116, 218);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  opacity: 0;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out 0s;
+  padding: 11px 15px;
+  transition: 0.3s ease;
+  background: rgb(35, 35, 35);
+  border-bottom: 2px solid rgb(46, 46, 46);
+}
+
+.card-footer .icon-collection {
+  display: flex;
+  margin-left: auto;
+}
+
+.card-footer .icon-collection i {
+  font-size: 14px;
+}
+
+.card-footer .icon-collection .icon {
+  transition: 0.3s ease;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.card-footer .icon-collection .icon:hover {
+  transform: scale(1.2);
+}
+
+.card-footer .icon-collection .icon:active {
+  transform: scale(0.9);
+}
+
+.output:hover .card-footer {
+  bottom: 0px;
+  opacity: 1;
+}
+
+
+.card-footer a:hover {
+  transform: scale(1.1);
+}
 
 /* accordion starts here */
 .accordion {

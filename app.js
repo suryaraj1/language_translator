@@ -5,7 +5,7 @@ const outputSelected = document.querySelector(".selected1");
 const outputOptionsContainer = document.querySelector(".options-container1");
 const outputOptionsList = document.querySelectorAll('.option1');
 const input = document.querySelector(".input");
-const output = document.querySelector(".output");
+const output = document.querySelector(".output-value");
 const translaterBtn = document.querySelector(".converter");
 const resetBtn = document.querySelector(".btn-reset");
 const navBar = document.querySelector("header");
@@ -54,7 +54,6 @@ const translate = (inputLanguage, outputLanguage, languagePair) => {
   fetch(`https://api.mymemory.translated.net/get?q=${input.value}&langpair=${languagePair}`)
     .then(response => response.json())
     .then(json => {
-      console.log(json);
       output.innerHTML = json.responseData.translatedText;
     });
 }
@@ -97,6 +96,9 @@ const runAccordion = () => {
 
 runAccordion();
 
+// for the clipboard copying
+new ClipboardJS('.icon.copy');
+
 // for the scroll-reveal part
 const sr = ScrollReveal({
   origin: 'top',
@@ -110,3 +112,17 @@ sr.reveal('.btn1', { delay: 200 });
 sr.reveal('.btn2', { delay: 400 });
 sr.reveal('.select-box1', { delay: 200 });
 sr.reveal('.output', { delay: 400 });
+
+
+// for tooltip
+
+tippy('.icon.copy', {
+  content: 'copied',
+  trigger: 'click',
+  hideOnClick: false,
+  onShow(instance) {
+    setTimeout(() => {
+      instance.hide();
+    }, 1000);
+  }
+})
