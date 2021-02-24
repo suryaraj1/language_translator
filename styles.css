@@ -61,7 +61,7 @@ header h2 i:hover {
   margin-top: 50px;
 }
 
-.sticky + .container {
+.sticky + .wrapper {
   padding-top: 60px;
 }
 
@@ -154,8 +154,8 @@ header h2 i:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 /* first select menu */
@@ -500,7 +500,7 @@ header h2 i:hover {
 
 /* accordion starts here */
 .accordion {
-  margin-top: 50px;
+  margin-top: 80px;
   height: 300px;
   background: #233240;
   display: flex;

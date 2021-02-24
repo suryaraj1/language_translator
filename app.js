@@ -8,6 +8,8 @@ const input = document.querySelector(".input");
 const output = document.querySelector(".output");
 const translaterBtn = document.querySelector(".converter");
 const resetBtn = document.querySelector(".btn-reset");
+const navBar = document.querySelector("header");
+const accordion = document.querySelectorAll(".contentBox");
 
 inputSelected.addEventListener('click', () => {
   inputOptionsContainer.classList.toggle('active');
@@ -37,7 +39,10 @@ const languageMap = {
   'Hindi': 'hi',
   'Italian': 'it',
   'Spanish': 'es',
-  'Japanese': 'ja'
+  'Japanese': 'ja',
+  'German': 'de',
+  'Latin': 'la',
+  'Chinese': 'zh'
 }
 
 const genLanguagePair = (inputLanguage, outputLanguage) => {
@@ -62,6 +67,35 @@ resetBtn.addEventListener('click', () => {
   input.value = "";
   output.innerHTML = "";
 })
+
+// navbar part starts here
+
+window.onscroll = () => {
+  const sticky = navBar.offsetTop;
+  if (window.pageYOffset > sticky) {
+    navBar.classList.add("sticky");
+  } else {
+    navBar.classList.remove("sticky");
+  }
+};
+
+// accordion part here
+
+const runAccordion = () => {
+  for (let i = 0; i < accordion.length; i += 1) {
+    accordion[i].addEventListener('click', () => {
+      accordion[i].classList.toggle('activate');
+      for (let j = 0; j < accordion.length; j += 1) {
+        if (i !== j && accordion[j].classList.contains('activate')) {
+          // switches off other accordions
+          accordion[j].classList.toggle('activate');
+        }
+      }
+    });
+  }
+};
+
+runAccordion();
 
 // for the scroll-reveal part
 const sr = ScrollReveal({
