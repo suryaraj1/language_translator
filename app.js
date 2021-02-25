@@ -67,6 +67,20 @@ resetBtn.addEventListener('click', () => {
   output.innerHTML = "";
 })
 
+// ref: https://www.codegrepper.com/code-examples/javascript/javascript+download+text+as+txt+file
+
+document.querySelector(".icon.download").addEventListener('click', () => {
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(output.innerHTML));
+  element.setAttribute('download', 'test.txt');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+});
 // navbar part starts here
 
 window.onscroll = () => {
@@ -107,7 +121,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal('.select-box', { delay: 200 });
-sr.reveal('.input', { delay: 400 });
+sr.reveal('.input-text', { delay: 400 });
 sr.reveal('.btn1', { delay: 200 });
 sr.reveal('.btn2', { delay: 400 });
 sr.reveal('.select-box1', { delay: 200 });
@@ -154,6 +168,7 @@ tippy('.icon.copy', {
   hideOnClick: true,
   placement: 'bottom',
   theme: 'light',
+  arrow: 'false',
   onShow(instance) {
     setTimeout(() => {
       instance.hide();
@@ -166,6 +181,7 @@ tippy('.icon.download', {
   hideOnClick: true,
   placement: 'bottom',
   theme: 'light',
+  arrow: 'false',
   onShow(instance) {
     setTimeout(() => {
       instance.hide();

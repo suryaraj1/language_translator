@@ -262,6 +262,12 @@ header h2 i:hover {
   font-size: 1.3em;
   position: relative;
   top: 60px;
+  transition: 0.3s ease;
+  border: 1px solid #fbfdff;
+}
+
+.input:focus {
+  border: 1px solid rgb(29, 29, 85);
 }
 
 .output {
@@ -640,7 +646,7 @@ header h2 i:hover {
 
 /* media queries */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 450px) {
   .component {
     width: 340px;
   }
