@@ -545,7 +545,7 @@ header h2 i:hover {
 
 .card-footer .icon-collection .icon {
   transition: 0.3s ease;
-  margin: 10px;
+  margin-right: 20px;
   height: 40px;
   width: 40px;
 }
@@ -640,9 +640,13 @@ header h2 i:hover {
 
 /* media queries */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .component {
     width: 340px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
   }
 
   .select-box,
