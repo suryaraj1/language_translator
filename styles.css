@@ -226,7 +226,7 @@ header h2 i:hover {
 .select-box .options-container.active {
   max-height: 240px;
   opacity: 1;
-  width: 430px;
+  width: 100%;
   border-radius: 5px;
   overflow-y: scroll;
   z-index: 1;
@@ -353,7 +353,7 @@ header h2 i:hover {
 .select-box1 .options-container1.active {
   max-height: 240px;
   opacity: 1;
-  width: 430px;
+  width: 100%;
   border-radius: 5px;
   overflow-y: scroll;
   z-index: 1;
@@ -647,6 +647,7 @@ header h2 i:hover {
 
   .select-box,
   .options-container,
+  .options-container.active,
   .input {
     width: 340px;
   }
@@ -658,8 +659,11 @@ header h2 i:hover {
   }
 
   .select-box1,
-  .options-container1,
   .output {
     width: 340px;
+  }
+
+  .options-container.active {
+    width: 40px;
   }
 }
