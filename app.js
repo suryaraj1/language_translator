@@ -162,29 +162,3 @@ tippy('.icon.copy', {
     }, 1000);
   }
 })
-
-tippy('.icon.copy', {
-  content: 'click to copy',
-  hideOnClick: true,
-  placement: 'bottom',
-  theme: 'light',
-  arrow: 'false',
-  onShow(instance) {
-    setTimeout(() => {
-      instance.hide();
-    }, 700);
-  }
-})
-
-tippy('.icon.download', {
-  content: 'save as text file',
-  hideOnClick: true,
-  placement: 'bottom',
-  theme: 'light',
-  arrow: 'false',
-  onShow(instance) {
-    setTimeout(() => {
-      instance.hide();
-    }, 700);
-  }
-})
