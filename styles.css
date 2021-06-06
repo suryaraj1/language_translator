@@ -12,8 +12,11 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: #fbfdff;
+  background-image: url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-5120x2880-1432.jpg);
+  background-size: cover;
   overflow-x: hidden;
   width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
 }
 
@@ -29,11 +32,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  padding: 30px 10%;
   z-index: 200000;
   transition: 0.2s ease;
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  backdrop-filter: blur(12px);
+  color: #fafafa;
+  background:rgba(16 18 27 / 40%);
+  border-bottom: 1px solid rgba(113 119 144 / 25%);;
 }
 
 header h2 {
@@ -78,6 +83,7 @@ header h2 i:hover {
 
 .nav__links .link {
   transition: all 0.3s ease 0s;
+  color: #fafafa;
 }
 
 .nav__links .link:hover {
@@ -155,14 +161,14 @@ header h2 i:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 /* first select menu */
 
 .select-box {
   display: flex;
-  width: 427px;
+  width: 517px;
   flex-direction: column;
   z-index: 1;
   position: absolute;
@@ -252,36 +258,38 @@ header h2 i:hover {
 
 .input {
   resize: none;
-  border: none;
+  border: 2px solid rgba(113 119 144 / 25%);
   outline: none;
-  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 7px;
   padding: 7px 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 1.3em;
   position: relative;
   top: 60px;
+  color: #fafafa;
   transition: 0.3s ease;
-  border: 1px solid #fbfdff;
+  backdrop-filter: blur(12px);
+  background: rgb(146 151 179 / 13%);
+  box-shadow:  -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
 }
 
 .input::placeholder {
   font-weight: 500;
+  color: #9f9f9f;
 }
 
 .input:focus {
-  border: 1px solid rgb(29, 29, 85);
+  background:  rgba(16 18 27 / 40%);
 }
 
 .output {
   resize: none;
-  border: none;
+  border: 2px solid rgba(113 119 144 / 25%);
   outline: none;
   height: 326px;
-  width: 424.8px;
-  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  width: 517px;
+  border-radius: 7px;
   padding: 7px 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -289,6 +297,10 @@ header h2 i:hover {
   position: relative;
   top: 60px;
   cursor: pointer;
+  color: #fafafa;
+  backdrop-filter: blur(12px);
+  background: rgb(146 151 179 / 13%);
+  box-shadow:  -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
 }
 
 .output-value::selection {
@@ -299,7 +311,7 @@ header h2 i:hover {
 
 .select-box1 {
   display: flex;
-  width: 427px;
+  width: 517px;
   flex-direction: column;
   z-index: 1;
   position: absolute;
@@ -399,7 +411,6 @@ header h2 i:hover {
   border: none;
   outline: none;
   padding: 10px 20px;
-  background: #276ef1;
   color: #fff;
   user-select: none;
   margin: 5px;
@@ -412,6 +423,8 @@ header h2 i:hover {
   justify-content: center;
   align-items: center;
   font-size: 17px;
+  background:rgba(39 110 241 / 40%);
+  backdrop-filter: blur(3px);
   font-family: 'Poppins', sans-serif;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
 }
@@ -422,7 +435,7 @@ header h2 i:hover {
 
 .converter:active {
   transform: scale(0.9);
-  background: #1a4dac;
+  background:rgba(26 77 172 / 40%);
 }
 
 @keyframes animate {
@@ -457,7 +470,6 @@ header h2 i:hover {
   outline: none;
   padding: 10px 24px;
   width: 160px;
-  background: rgb(182, 19, 19);
   color: #fff;
   font-weight: 700;
   border-radius: 6px;
@@ -467,13 +479,15 @@ header h2 i:hover {
   justify-content: center;
   align-items: center;
   font-size: 17px;
+  background:rgba(226 18 27 / 40%);
+  backdrop-filter: blur(3px);
   font-family: 'Poppins', sans-serif;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
 }
 
 .btn-reset:active {
   transform: scale(0.9);
-  background: #770e0e;
+  background:rgba(119 14 14 / 40%);
 }
 
 .btn-reset:active .reset-icon {
@@ -536,7 +550,7 @@ header h2 i:hover {
   bottom: -40px;
   left: 0;
   opacity: 0;
-  border-radius: 3px;
+  border-radius: 7px;
   transition: all 0.5s ease-in-out 0s;
   padding: 11px 15px;
   transition: 0.3s ease;
