@@ -54,8 +54,14 @@ const translate = (inputLanguage, outputLanguage, languagePair) => {
   fetch(`https://api.mymemory.translated.net/get?q=${input.value}&langpair=${languagePair}`)
     .then(response => response.json())
     .then(json => {
-      output.innerHTML = json.responseData.translatedText;
-    });
+      if (json.responseStatus !== 429)
+        output.innerHTML = json.responseData.translatedText;
+      else {
+        output.classList.add("error");
+        output.innerHTML = "Mymemory API query limit reached";
+      }
+    })
+    .catch(error => console.log(error));
 }
 
 translaterBtn.addEventListener('click', () => {

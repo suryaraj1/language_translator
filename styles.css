@@ -181,7 +181,7 @@ header h2 i:hover {
 }
 
 .select-box .options-container {
-  background: #2f3640;
+  background: rgba(16 18 27 / 40%);;
   color: #f5f6fa;
   width: 100%;
   max-height: 0;
@@ -194,7 +194,7 @@ header h2 i:hover {
 }
 
 .selected {
-  background: #2f3640;
+  background: rgba(16 18 27 / 40%);
   border-radius: 5px;
   margin-bottom: 8px;
   color: #f5f6fa;
@@ -223,7 +223,7 @@ header h2 i:hover {
 }
 
 .select-box .option:hover {
-  background: #414b57;
+  background: rgba(6 18 27 / 40%);;
   transition: 0.3s ease;
 }
 
@@ -309,6 +309,10 @@ header h2 i:hover {
   box-shadow:  -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
 }
 
+.output .error {
+  color: rgb(167, 56, 56);
+}
+
 .output-value::selection {
   background-color: #fff;
 }
@@ -324,7 +328,7 @@ header h2 i:hover {
 }
 
 .select-box1 .options-container1 {
-  background: #2f3640;
+  background: rgba(16 18 27 / 40%);;
   color: #f5f6fa;
   width: 100%;
   max-height: 0;
@@ -337,7 +341,7 @@ header h2 i:hover {
 }
 
 .selected1 {
-  background: #2f3640;
+  background: rgba(16 18 27 / 40%);
   border-radius: 5px;
   margin-bottom: 8px;
   color: #f5f6fa;
@@ -366,7 +370,7 @@ header h2 i:hover {
 }
 
 .select-box1 .option1:hover {
-  background: #414b57;
+  background: rgba(6 18 27 / 40%);
   transition: 0.3s ease;
 }
 
